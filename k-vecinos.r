@@ -1,6 +1,6 @@
-fuente <- "https://github.com/xtrs84zk/BigData/blob/master/data.txt?raw=true"
-datos<- fuente
-head(fuente)
+## instalar librería kknn
+
+datos <- read.table("https://github.com/xtrs84zk/BigData/blob/master/data.txt?raw=true", header = TRUE)
 
 ## Mediante un muestreo aleatorio definimos una tabla de aprendizaje para el modelo y una tabla de pruebas para verificar su calidad predictiva
 muestra <- sample(1:150, 50)

@@ -1,3 +1,4 @@
+# instalar librería dplyr
 # Y entonces tendrías Veces que rentó cada cliente | veces que se rentó cada película | rating | hora promedio en que rentó
 
 datos <- read.table("https://github.com/xtrs84zk/BigData/blob/master/data.txt?raw=true", header = TRUE)
@@ -46,32 +47,32 @@ df$rentsByUser[is.na(df$user_id)] <- 0
 df
 
 
-vector <- c()
-for(i in datos$user_id){
-    for(p in timesByUser$Var1){
-        if(i==p){
-            vector <- c(vector,timesByUser$Freq)
-        }
-    }
-}
+# vector <- c()
+# for(i in datos$user_id){
+#     for(p in timesByUser$Var1){
+#         if(i==p){
+#             vector <- c(vector,timesByUser$Freq)
+#         }
+#     }
+# }
 
-temporal <- c('rentsByC')
-continue <- TRUE
-while(continue){
-    for(i in datos$user_id){
-        cantidad <- 0
-        for(k in datos$user_id){
-            if(i==k){
-                cantidad <- cantidad + 1
-            }
-        }
-        temporal <- c(temporal,cantidad)
-    }
-if(temporal.length > datos$user_id.length){
-    continue <- FALSE
-}
-}
-datos$rentsByUsr <- temporal
+# temporal <- c('rentsByC')
+# continue <- TRUE
+# while(continue){
+#     for(i in datos$user_id){
+#         cantidad <- 0
+#         for(k in datos$user_id){
+#             if(i==k){
+#                 cantidad <- cantidad + 1
+#             }
+#         }
+#         temporal <- c(temporal,cantidad)
+#     }
+# if(temporal.length > datos$user_id.length){
+#     continue <- FALSE
+# }
+# }
+# datos$rentsByUsr <- temporal
 
 abc <- aggregate(datos$user_id, by=list(data$timestamp), FUN=mean)[2]
 
