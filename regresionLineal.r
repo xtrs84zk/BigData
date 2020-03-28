@@ -12,7 +12,7 @@ plot(datos$user_id,df$rentsByUser)
 
 ##Cuántas veces rentó esa película cada cliente
 datos$occ <- ave(seq(nrow(datos)), datos$user_id, datos$item_id, FUN = length)
-plot(datos$item_id,datos$occ)
+plot(datos$user_id,datos$occ)
 ##vaya, literalmente fue una sola vez, ningún cliente volvió a rentar la misma película
 
 ##convertir y modificar todo en df

@@ -1,4 +1,4 @@
-## instalar librería kknn
+## instalar librería kknn 
 
 datos <- read.table("https://github.com/xtrs84zk/BigData/blob/master/data.txt?raw=true", header = TRUE)
 
@@ -19,7 +19,7 @@ prediction <- predict(modelo, testing[, -9])
 prediction
 
 ## To begin analyzing the quality of the model can build a confusion matrix. Each column of the matrix represents the number of predictions of each class, while each row represents the instances in the actual class.
-calidadDelModelo <- table(testing[,4], prediction)
+calidadDelModelo <- table(testing[,2], prediction)
 calidadDelModelo
 
 ##We must check for accuracy
